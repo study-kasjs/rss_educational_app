@@ -42,11 +42,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.use(express.static(__dirname + '/dist'));
-app.get('/', function(req, res) {
-	res.send({
-		message: 'Work'
-	})
-});
+app.get('/', routes);
 
 app.listen(app.get('port'));
 module.exports = app;
