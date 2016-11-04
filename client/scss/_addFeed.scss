@@ -1,0 +1,42 @@
+#add-feed{
+	height: 100%;
+	h3, h4{
+		font-weight: 400;
+	}
+	.control-label{
+		font-weight: 400;
+	}
+}
+
+#add-feed:before {
+	content: ' ';
+	display: block;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.4;
+	background-image: url('/assets/images/newsletterbackground.jpg');
+	background-repeat: no-repeat;
+	background-position: 50% 0;
+	-ms-background-size: cover;
+	-o-background-size: cover;
+	-moz-background-size: cover;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
+.form-input {
+	height: 45px;
+	border-radius: $main-border-radius;
+}
+
+.popular-checkbox{
+	width: 2em;
+}
+
+.add-feed-form{
+	margin: 50px auto;
+	border-radius: $main-border-radius;
+}

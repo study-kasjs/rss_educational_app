@@ -1,0 +1,355 @@
+.app-btn {
+	padding: 0.8em;
+	border: none;
+	border-radius: $main-border-radius;
+	transition: $app-transition;
+	cursor: pointer;
+	text-transform: uppercase;
+	color: black;
+	background-color: white;
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+	outline: none;
+	text-decoration: none;
+
+	&:hover {
+		background-color: black;
+		color: white;
+		border: none;
+		transition: $app-transition;
+		box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.76);
+		text-decoration: none;
+	}
+
+	&:active {
+		transition: $app-transition;
+		border: none;
+		outline: none;
+	}
+}
+
+.app-btn-blue {
+	color: white;
+	background-color: $blue-btn-active-color;
+
+	&:visited {
+		color: white;
+		background-color: $blue-btn-active-color;
+	}
+
+	&:hover {
+		color: black;
+		background-color: white;
+		transition: $app-transition;
+
+		a {
+			color: black;
+		}
+	}
+
+	&:active {
+		outline: none;
+		color: white;
+		background-color: $blue-btn-active-color;
+	}
+}
+
+.subscribe-btn{
+	height: 3em;
+	width: 3em;
+	font-weight: 500;
+}
+
+.app-btn-red {
+	color: white;
+	background-color: $delete-btn-color;
+
+	&:visited {
+		color: white;
+		background-color: $delete-btn-color;
+	}
+
+	&:hover {
+		color: black;
+		background-color: white;
+		transition: $app-transition;
+
+		a {
+			color: black;
+		}
+	}
+
+	&:active {
+		outline: none;
+		color: white;
+		background-color: $delete-btn-color;
+	}
+}
+
+.submit-btn {
+	margin: 1em 0 1em 0;
+}
+
+.load-btn-wrap{
+	margin-bottom: 1em;
+}
+
+#list .load-btn-wrap{
+	margin-top: 1em;
+}
+
+button[disabled] {
+	opacity: 0.5;
+
+	&:hover {
+		box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.76);
+		background-color: $blue-btn-active-color;
+		color: white;
+	}
+}
+
+.app-btn-feed-list {
+	font-size: 1em;
+	padding: 10px;
+	top: 0;
+	margin-bottom: 0;
+	border: none;
+	border-radius: $main-border-radius;
+	transition: $app-transition;
+	cursor: pointer;
+	
+	&:visited {
+		border: none;
+	}
+
+	&:hover {
+		border: none;
+		transition: $app-transition;
+	}
+
+	&:active {
+		border: none;
+	}
+}
+
+.read-btn {
+	width: 7em;
+	padding: 0.3em;
+	margin-right: $main-app-offset;
+}
+
+.app-btn-delete {
+	&:visited {
+		border: none;
+	}
+
+	&:hover {
+		background-color: $delete-btn-color;
+		color: white;
+		border: none;
+		transition: $app-transition;
+	}
+
+	&:active {
+		border: none;
+	}
+}
+
+.delete-btn-wrap {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.social_btn {
+	margin: 5px 10px 5px 0;
+}
+
+.extra-btn {
+	cursor: pointer;
+	transition: $app-transition;
+
+	&:hover {
+		transition: $app-transition;
+	}
+
+	&:active {
+		transition: $app-transition;
+		transform: scale(1.5, 1.5);
+	}
+}
+
+.onhover-orange {
+	color: black;
+	&:hover {
+		color: #ff9d00;
+	}
+
+	&:active {
+		color: #e2ff00;
+	}
+}
+
+.onhover-red {
+	color: black;
+	&:hover {
+		color: #ff6c00;
+	}
+
+	&:active {
+		color: #ff0000;
+	}
+}
+
+.onhover-green {
+	color: black;
+	&:hover {
+		color: #33c23e;
+	}
+
+	&:active {
+		color: #00ff62;
+	}
+}
+
+.onhover-blue {
+	color: black;
+	&:hover {
+		color: $blue-btn-active-color;
+	}
+
+	&:active {
+		color: $blue-btn-active-color;
+	}
+}
+
+.app-btn-toaster {
+	border: none;
+	border-radius: $main-border-radius;
+	background-color: #5f5f5f;
+	transition: $app-transition;
+	cursor: pointer;
+	color: white;
+	margin: 0 0.5em 0 0.5em;
+	text-transform: uppercase;
+
+	&:hover {
+		background-color: #9f9f9f;
+		color: white;
+		border: none;
+		transition: $app-transition;
+	}
+
+	&:active {
+		background-color: #ad8888;
+		transition: $app-transition;
+		border: none;
+		outline: none;
+	}
+}
+
+.app-btn-toaster-red {
+	@extend .app-btn-toaster;
+	color: #eb4e54;
+}
+
+a.sharing-btn {
+	font-size: 2em;
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+	transition: color 0.3s ease;
+	margin: $main-app-offset/3;
+	&:hover {
+		transition: color 0.3s ease;
+		color: #3949ab;
+	}
+}
+
+.sort-btn {
+	@extend .app-btn-feed-list;
+	border-radius: $main-border-radius;
+	margin-left: $main-app-offset;
+}
+
+.sort-item {
+	cursor: pointer;
+}
+.soc-btn {
+	width: 145px;
+	margin: 5px 5px 5px 0px;	
+}
+
+.terms-btn {
+	font-weight: 600;
+	font-size: 16px;
+	margin-right: 0;
+	border: 1px solid #cccccc; 
+}
+
+.close:hover {
+	color: #3949ab;
+}
+
+.lang-btn {
+	padding: 0.7em 0 0 0;
+	width: 1.1em;
+	position: absolute;
+	right: 16.8em;
+}
+.select-lang-btn {
+	@extend .app-btn-feed-list;
+	border-radius: $main-border-radius;
+	margin-left: $main-app-offset;
+	padding: 3px;
+	background: transparent;
+	height: 24px;
+	margin-top: 2px;
+	color: #ffffff;
+}
+
+.en, .pl  {
+	width: 4em;
+	margin: 5px 0 0 6px;
+	padding: 5px;
+	background-color: #ccc;
+}
+.ua {
+	width: 4em;
+	margin: 0 0 0 6px;
+	padding: 5px;
+	background-color: #ccc;
+}
+.lang-list {
+	width: 5em;
+	min-width: 0;
+	left: -3px;
+}
+.select-lang-item {
+	padding: 0;
+	cursor: pointer;
+}
+.refresh-icon {
+	display: block;
+	color: #3949ab;
+	font-size: 50px;
+	text-align: center;
+}
+
+.lang_btn {
+	padding: 0;
+	cursor: pointer;
+}
+.flag-icon {
+	width: 4em;
+}
+
+.lang-title {
+	color: #ffffff;
+	position: relative;
+	bottom: 0.1em;
+}
+.caret {
+	position: relative;
+	bottom: 0.1em;
+	color: #ffffff;
+}

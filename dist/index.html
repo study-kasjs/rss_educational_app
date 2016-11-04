@@ -1,0 +1,38 @@
+<html lang={{lang}} ng-app="rssreader">
+<head ng-controller="IndexController">
+	<title>Rss Reader</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	<link rel="stylesheet" href="css/combined.css">
+	<link rel="stylesheet" type="text/css" ng-href="css/style.min.css">
+	<link rel="stylesheet" type="text/css" ng-href="css/{{getTheme()}}.css">
+	<link href="assets/fonts/Roboto-Regular.ttf">
+</head>
+	<body ng-controller="IndexController">
+		<div id="app-wrapper">
+			<ng-include src="'partials/static/navbar.html'"></ng-include>
+			<div class="container-fluid">
+				<div class="loading-icon fading-anim" ng-show="loadingIcon()">
+					<div class="center-absolute spinner">
+						<div class="rect1"></div>
+						<div class="rect2"></div>
+						<div class="rect3"></div>
+						<div class="rect4"></div>
+						<div class="rect5"></div>
+					</div>
+				</div>
+				<div class="loading-icon fading-anim" ng-show="isReload()">
+					<div class="center-absolute">
+						<h1 ng-bind="reloadMsg | translate"></h1>
+						<div>
+							<span class="refresh-icon fa fa-refresh pointer center-block" ng-click="reload($event)"></span>
+						</div>
+					</div>
+				</div>
+				<ui-view></ui-view>
+			</div>
+		</div>
+		<script src="scripts/minified.js"></script>
+	</body>
+</html>

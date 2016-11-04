@@ -1,0 +1,55 @@
+<div id="home-container" class="row">
+    <div class="row">
+        <div id='home' class="col-sm-12 text-center">
+            <div class="slide-down-anim">
+                <h1 class="welcometo"><span translate>Welcome to </span><span class="orange"> RSS</span>|READER</h1>
+                <h3 translate class="welometo-under test-lang">All of your favourites news feeds in one place</h3>
+            </div>
+            <div class="fade-in-1s">
+                <button translate class="app-btn app-btn-blue" ng-click="onFeeds()" ng-hide='!isLoggedIn()'>Show Feeds</button>
+                <button translate id="login-btn" class="app-btn app-btn-blue" ng-click="onLogin()" ng-hide="isLoggedIn()" style="margin-right: 0.8em">Sign In</button>
+                <button translate id="register-btn" class="app-btn app-btn-blue" ng-click="onRegister()" ng-hide="isLoggedIn()">Sign Up</button>
+            </div>
+            <div class="center-absolute home-image">
+                <img class="center-block slide-from-left hidden-xs hidden-sm" src="assets/images/dashboard-view.png" alt="dashboard" />
+                <img class="center-block slide-from-left visible-xs" src="assets/images/dashboard-view-mobile.png" alt="dashboard" />
+                <img class="center-block slide-from-left visible-sm" src="assets/images/dashboard-view-tablet.png" alt="dashboard" />
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="second-layer">
+            <div class="col-md-6 col-sm-12 home-same-height center-children">
+                <h3 class="text-center welcometo-under not-visible" when-visible="fadeIn"><span translate>Share news with anybody via social media</span></h3>
+            </div>
+            <div class="col-md-6 col-sm-12 home-same-height">
+                <img class="center-block not-visible home-small-img-mobile" src="assets/images/sharing-advert.png" alt="sharing" when-visible="slideFromRight"/>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="third-layer">
+            <div class="col-md-6 col-sm-12 home-same-height">
+                <h3 class="text-center welcometo-under not-visible visible-xs visible-sm" when-visible="fadeIn"><span translate >Instantly save favourites</span></h3>
+                <img class="center-block not-visible home-small-img-mobile" src="assets/images/favourites1-advert.png" alt="sharing" when-visible="slideFromLeft"/>
+                <h3 class="text-center welcometo-under not-visible hidden-xs hidden-sm" when-visible="fadeIn"><span translate >Instantly save favourites</span></h3>
+            </div>
+            <div class="col-md-6 col-sm-12 home-same-height">
+                <img class="center-block not-visible top-offset-mobile" src="assets/images/favourites2-advert.png" alt="sharing" when-visible="slideFromRight"/>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="fourth-layer">
+            <h3 class="text-center welcometo-under not-visible visible-sm visible-xs" when-visible="fadeIn"><span translate >Add new feeds in few seconds</span></h3>
+            <div class="col-md-6 col-sm-12 home-same-height add-feed-img not-visible center-children-tablet" when-visible="slideFromLeft">
+                <img class="center-block hidden-sm hidden-xs" src="assets/images/addFeed2-advert.png" alt="sharing" />
+                <img class="center-block visible-sm visible-xs home-small-img-mobile" src="assets/images/addFeed2-advert.png" alt="sharing"/>
+            </div>
+            <div class="col-md-6 col-sm-12 home-same-height">
+                <img class="center-block not-visible home-small-img-mobile hidden-sm hidden-xs" src="assets/images/addFeed-advert.png" alt="sharing" when-visible="slideFromRight"/>
+                <h3 class="text-center welcometo-under not-visible hidden-sm hidden-xs" when-visible="fadeIn"><span translate >Add new feeds in few seconds</span></h3>
+            </div>
+        </div>
+    </div>
+</div>

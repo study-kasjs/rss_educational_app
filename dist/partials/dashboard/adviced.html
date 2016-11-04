@@ -1,0 +1,80 @@
+<div id="adviced-feeds-wrapper" class="clearfix col-lg-10 col-lg-offset-1 col-md-12 col-md-offset-0">
+	<h3 id="feeds-title" class="uppercase">Best #<span ng-bind="advicedCategory"></span> resources</h3>
+	<div ng-repeat="item in adviced | filter:{category: advicedCategory}">
+		<div class="col-lg-4 col-sm-6 col-xs-12" ng-repeat="feed in item.feeds" ng-init="article = getFirstArticle(feed._id)">
+			<div class="adviced-feed app-panel fade-in-anim">
+				<div class="adviced-feed-title">
+					<a ng-href="{{feed.link}}"><img class="favicon" ng-src="{{feed.link|favicon}}"><span ng-bind="feed.title"></span></a>
+				</div>
+				<div class="adviced-feed-content" ng-show="feed.description">
+					<span ng-bind="feed.description"></span>
+				</div>
+				<div class="adviced-feed-content" ng-hide="feed.description">
+					<span>No description available</span>
+				</div>
+				<div class="adviced-article-title offset-top">
+					<div class="list-item" ng-click="readArticle(article)"><span ng-bind="article.title"></span></div>
+				</div>
+				<div class="img-responsive adviced-article-img center-block offset-top" ng-show="article.img" ng-style="{'background-image':'url(' + article.img + ')'}"></div>
+				<div class="img-responsive adviced-article-img adviced-no-img center-block offset-top" ng-hide="article.img"></div>
+				<div class="advice-feed-stats offset-top">
+					<div class="col-xs-4 stats-block">
+						<div class="center-block readers-num" ng-bind="feed.currentSubscriptions"></div>
+						<div class="center-block readers-word not-important">subscribers</div>
+					</div>
+					<div class="">
+					</div>
+					<div class="col-xs-8 stats-block">
+						<button class="app-btn subscribe-btn app-btn-delete pull-right" ng-click="onAdvicedDelete(feed)" ng-show="profile.admin"><span class="glyphicon glyphicon-trash"></span></button>
+						<button class="app-btn app-btn-blue subscribe-btn pull-right offset-right" ng-click="addFeedByAdvice(feed)"><span class="glyphicon glyphicon-plus"></span></button>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	<modal show='modalShown'>
+		<h4 translate class="uppercase">add new feed</h4>
+		<div class="modal-row">
+			<select id="category" 
+					class="form-control form-input" 
+					ng-model="obj.category" 
+					ng-options="category for category in categories()" 
+					ng-change="checkIfNew()" 
+					uib-tooltip="To enter custom category choose 'custom'" 
+					tooltip-trigger="'focus'" 
+					tooltip-placement="top-left">
+				<option value="" disabled selected hidden>{{advicedCategory}}</option>
+			</select>
+		</div>
+		<div class="modal-row">
+			<input id="new-category" class="form-control form-input fading-anim" placeholder="Enter category name" ng-model="newCategory.category" ng-show="addingNewCategory" maxlength="25">
+		</div>
+		<div class="modal-row">
+			<div class="center-children">
+				<button type="button" class="app-btn app-btn-blue" aria-label="Justify" ng-click="addFeed()" translate>Add Feed</button>
+			</div>
+		</div>
+		<div class="modal-row" ng-show="error">
+			<div class="alert alert-danger text-center fading-anim" role="alert">
+				<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+				<span class="sr-only">Error:</span>
+				<span ng-bind="error | translate"></span>
+			</div>
+		</div>
+	</modal>
+</div>
+
+<div class="mobile-zero-padding col-lg-10 col-lg-offset-1 col-md-12 col-md-offset-0">
+	<div id="adviced-cards-wrapper" class="desktop-grow clearfix feeds">
+		<h4 class="explore-header uppercase">Explore popular</h4>
+		<div class="col-lg-3 col-sm-4 col-xs-6" ng-repeat="item in adviced">
+			<a class="pointer adviced-card" ng-click="toAdvicedCategory(item.category)">
+				<h4 class="advice-header text-center center-absolute" ng-bind="item.category"></h4>
+				<div class="img-responsive adviced-img" ng-style="setCoverImage(item)">
+				</div>
+				<div class="gradient"></div>
+			</a>
+		</div>
+	</div>
+</div>

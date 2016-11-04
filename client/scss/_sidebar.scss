@@ -1,0 +1,230 @@
+$sidebar-color: #e8e8e8;
+$item-hover-color: #c1c1c1;
+$item-text-color: #000000;
+$sidebar-mobile-width: 270px;
+
+#sidebar-toggle {
+    float: left;
+    margin-left: 1em;
+}
+
+.chevron-down > span.glyphicon.glyphicon-chevron-right {
+    transform: rotate(90deg);
+}
+
+span.glyphicon.glyphicon-chevron-right {
+    margin-right: $main-app-offset;
+    transition: all 0.3s ease;
+}
+
+span.glyphicon.glyphicon-chevron-left {
+    margin-right: $main-app-offset;
+    transition: all 0.3s ease;
+}
+
+
+#sidebar span.glyphicon-star {
+    margin-right: $main-app-offset/2;
+    color: #ff9d00;
+}
+
+#dashboard {
+    font-family: 'Roboto', sans-serif;
+    transition: all 0.5s ease;
+    margin-right: -15px;
+    padding: 0 1em 0 1em;
+    margin-left: -1em;
+    height: 100%;
+    background-color: $main-background-color;
+
+    #sidebar-wrapper {
+        position: fixed;
+        top: $navbar-height;
+        bottom: 0;
+        left: 0;
+        z-index: 9998;
+        display: block;
+        padding: 0px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        background-color: $sidebar-color;
+    }
+
+    .sidebar-mobile {
+        display: block;
+    }
+
+    .sidebar-overlay {
+        position: fixed;
+        z-index: 9997;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.6);
+    }
+
+    #sidebar {
+        width: 100%;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+        }
+
+        a {
+            display: block;
+            text-decoration: none;
+            color: $item-text-color;
+
+            &:hover {
+                text-decoration: none;
+                background-color: transparent;
+            }
+
+            &:active,
+            &:focus {
+                text-decoration: none;
+            }
+        }
+
+        .app-btn-blue {
+            margin-top: 1em;
+            margin-bottom: 1em;
+        }
+    }
+
+    #page-content-wrapper {
+        width: 100%;
+        position: absolute;
+    }
+}
+
+#dashboard #allFeedsBtn {
+    height: 50px;
+    font-size: 18px;
+    line-height: 60px;
+
+    a {
+        color: $item-text-color;
+
+        &:hover {
+            color: #fff;
+            background: none;
+        }
+    }
+
+    .all-text {
+        padding-left: 10px;
+    }
+}
+
+ul[dnd-list], ul[dnd-list] > li {
+    position: relative;
+}
+
+ul[dnd-list] {
+    min-height: 3em;
+}
+
+ul[dnd-list] .dndDraggingSource {
+    display: none;
+}
+
+ul[dnd-list] .dndPlaceholder {
+    display: block;
+    background-color: #c1c1c1;
+    min-height: 3em;
+}
+
+ul[dnd-list] .dndPlaceholder:after {
+    font-family: 'Glyphicons Halflings';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    content: "\e234";
+}
+
+#sidebar-wrapper.toggled {
+    display: block;
+}
+
+.sidebar-item {
+    padding-left: 1em;
+    cursor: pointer;
+    width: 100%;
+    line-height: 3em;
+    border-right: 0em solid;
+
+    a {
+        text-overflow: ellipsis;
+        padding-right: 0.5em;
+        overflow: hidden;
+    }
+
+    .fav-dropdown {
+        padding: 0;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    &:hover {
+        transition: background 0.2s ease;
+        background-color: $item-hover-color;
+
+        &>.hover-feed-shrink{
+            padding-right: 4em;
+        }
+
+        .my-hidden {
+            display: inline;
+            visibility: visible;
+            opacity: 1;
+            transition: opacity 0.2s ease;
+        }
+    }
+}
+
+.sidebar-sub-item {
+    padding-left: 2em;
+    box-sizing: border-box;
+    cursor: pointer;
+    width: 100%;
+    line-height: 3em;
+    border-right: 0em solid;
+
+    &:hover {
+        border-right: 0.7em solid rgba(57, 73, 171, 0.60);
+        .sidebar-item{
+            border: none;
+        }
+    }
+}
+
+#sidebar .selected {
+    border-right: 0.7em solid $blue-btn-active-color;
+    background-color: $item-hover-color;
+    .eye-view-btn {
+        right: 1.3em;
+    }
+}
+
+.eye-view-btn {
+    opacity: 0.3;
+    position: absolute;
+    right: 2em;
+    &:hover {
+        transform: scale(1.1);
+        color: $blue-btn-active-color;
+        opacity: 1;
+    }
+}
+
+.all-icon {
+    margin-right: 0.9em;
+    margin-left: 0.1em;
+}
