@@ -41,7 +41,7 @@ app.use(bodyParser.urlencoded({
 	extended: true
 }));
 
-app.use(express.static(__dirname + '/client'));
+app.use(express.static(__dirname + '/dist'));
 app.use('/', routes);
 
 app.listen(app.get('port'));
