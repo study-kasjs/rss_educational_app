@@ -41,8 +41,7 @@
     "winston": "0.7.x"
   },
   "repository": {
-    "type": "git",
-    "url": "https://github.com/nromanen/Ch-041/tree/Kasjs"
+    "type": "git"
   },
   "keywords": [
     "rss",

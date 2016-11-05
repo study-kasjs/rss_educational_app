@@ -19,6 +19,7 @@ mkdirp.sync('./dist/uploads', function (err) {
 });
 
 gulp.task('server', function (cb) {
+	});
 	console.log("Server is running on port 8080");
 	exec('npm start', function (err, stdout, stderr) {
 		console.log(stdout, stderr);
@@ -89,7 +90,7 @@ gulp.task('build', ['scripts', 'sass'], function () {
 
 	gulp.src(['client/translation/**'])
 		.pipe(gulp.dest('./dist/translation/'));
-	
+
 	gulp.src(['client/bower_components/flag-icon-css/flags/**'])
 		.pipe(gulp.dest('./dist/flags/'));
 
