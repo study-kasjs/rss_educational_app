@@ -2,7 +2,7 @@ var mongoose = require('mongoose'),
 	jwt = require('jwt-simple'),
 	bcrypt = require('bcryptjs'),
 	config = require('../config/config'),
-	
+
 	userSchema = new mongoose.Schema({
 		email: {
 			type: String,
@@ -11,10 +11,6 @@ var mongoose = require('mongoose'),
 		},
 		password: { type: String, select: true },
 		tempPassword: {type: String},
-		local: {
-			email : String,
-			password : String
-		},
 		admin: Boolean,
 		date_of_signup : {type : Date},
 		emailToken : String,
@@ -77,7 +73,7 @@ userSchema.methods.generateHash = function(password) {
 userSchema.methods.setPassword = function (password) {
 	this.salt = bcrypt.genSaltSync(10);
 	this.hash = bcrypt.hashSync(password, this.salt);
-	
+
 };
 
 userSchema.methods.validPassword = function (password) {

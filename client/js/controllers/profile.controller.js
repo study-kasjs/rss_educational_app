@@ -2,7 +2,7 @@
 	'use strict';
 	angular.module('rssreader').controller('ProfileController', ['Upload', '$http', '$state', 'profileService', '$scope', '$rootScope',
 		'authService', '$window', 'themeService', 'dashboardService', '$auth', 'accountInfo', 'toasterService', 'transfer', '$translate',
-		function (Upload, $http, $state, profileService, $scope, $rootScope, authService, $window, themeService, dashboardService, $auth, 
+		function (Upload, $http, $state, profileService, $scope, $rootScope, authService, $window, themeService, dashboardService, $auth,
 			accountInfo, toasterService, transfer, $translate) {
 			dashboardService.isReadingArticle = true;
 			$scope.currentUser = profileService.refreshProfileData;
@@ -106,7 +106,7 @@
 				angular.element('label.error').remove();
 				angular.element('span.msg-error').addClass('error-hidden');
 			};
-			
+
 			$scope.changePassValidation = {
 				rules: {
 					currentPassword: {
@@ -141,21 +141,21 @@
 				}
 			};
 
-			$scope.changeTheme = function () {
-				$scope.modalShown = !$scope.modalShown;
-			};
-
-			$scope.updateTheme = function (layout) {
-			    dashboardService.displayLoading();
-				themeService.changeTheme(layout.url).error(function (error) {
-					console.log("theme not changed" + error);
-				}).then(function (response) {
-					profileService.getProfile();
-				}).finally(function () {
-				    dashboardService.hideLoading();
-				});
-			};
-			$scope.layouts = themeService.layouts;
+			// $scope.changeTheme = function () {
+			// 	$scope.modalShown = !$scope.modalShown;
+			// };
+			//
+			// $scope.updateTheme = function (layout) {
+			//     dashboardService.displayLoading();
+			// 	themeService.changeTheme(layout.url).error(function (error) {
+			// 		console.log("theme not changed" + error);
+			// 	}).then(function (response) {
+			// 		profileService.getProfile();
+			// 	}).finally(function () {
+			// 	    dashboardService.hideLoading();
+			// 	});
+			// };
+			// $scope.layouts = themeService.layouts;
 		}
 	]);
 })();
