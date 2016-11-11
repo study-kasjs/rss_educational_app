@@ -1,5 +1,5 @@
 (function () {
-	angular.module('rssreader').controller('IndexController', ['$scope', '$state', '$timeout', 'profileService', 'dashboardService', 'authService', '$window', 'themeService', function ($scope, $state, $timeout, profileService, dashboardService, authService, $window, themeService) {
+	angular.module('rssreader').controller('IndexController', ['$scope', '$state', '$timeout', 'profileService', 'dashboardService', 'authService', '$window', function ($scope, $state, $timeout, profileService, dashboardService, authService, $window) {
 		$scope.loadingIcon = dashboardService.isLoading;
 		$scope.isReload = dashboardService.isReload;
 		$scope.reloadMsg = 'It takes to long to load';
@@ -11,13 +11,13 @@
 			dashboardService.toReload = false;
 			$state.reload();
 		}
-		$scope.getTheme = function () {
-			if (authService.isLoggedIn()) {
-				return profileService.refreshProfileData().colorTheme;
-			} else {
-				return "theme1";
-			}
-		}
+		// $scope.getTheme = function () {
+		// 	if (authService.isLoggedIn()) {
+		// 		return profileService.refreshProfileData().colorTheme;
+		// 	} else {
+		// 		return "theme1";
+		// 	}
+		// }
 
 		$scope.fadeIn = function ($el) {
 			$el.removeClass('not-visible');

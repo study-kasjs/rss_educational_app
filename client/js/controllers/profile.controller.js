@@ -1,8 +1,8 @@
 (function () {
 	'use strict';
 	angular.module('rssreader').controller('ProfileController', ['Upload', '$http', '$state', 'profileService', '$scope', '$rootScope',
-		'authService', '$window', 'themeService', 'dashboardService', '$auth', 'accountInfo', 'toasterService', 'transfer', '$translate',
-		function (Upload, $http, $state, profileService, $scope, $rootScope, authService, $window, themeService, dashboardService, $auth,
+		'authService', '$window', 'dashboardService', '$auth', 'accountInfo', 'toasterService', 'transfer', '$translate',
+		function (Upload, $http, $state, profileService, $scope, $rootScope, authService, $window, dashboardService, $auth,
 			accountInfo, toasterService, transfer, $translate) {
 			dashboardService.isReadingArticle = true;
 			$scope.currentUser = profileService.refreshProfileData;
