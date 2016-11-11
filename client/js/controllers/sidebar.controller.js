@@ -10,48 +10,48 @@
 		$scope.feeds = $scope.feedsData.feedsDictionary;
 		$scope.favs = $scope.feedsData.favouritesDictionary;
 
-		// $scope.onFeedsDrag = function (parent, index) {
-		// 	dashboardService.displayLoading();
-		// 	$scope.feeds[parent].feeds.splice(index, 1);
-		// 	feedsService.setInnerFeedsOrder().then(function (res) {
-		// 		angular.forEach($scope.feeds, function (value, key) {
-		// 			if (!value.feeds.length) {
-		// 				feedsService.getAllFeeds();
-		// 			}
-		// 		});
-		// 		return res;
-		// 	}, function (err) {
-		// 	    console.log(err);
-		// 	    return err;
-		// 	}).finally(function () {
-		// 		dashboardService.hideLoading();
-		// 	});
-		// }
-		//
-		// $scope.onFeedsCatDrag = function (index) {
-		// 	dashboardService.displayLoading();
-		// 	$scope.feeds.splice(index, 1);
-		// 	feedsService.setFeedsOrder().then(function (res) {
-		// 	    return res;
-		// 	}, function (err) {
-		// 	    console.log(err);
-		// 	    return err;
-		// 	}).finally(function () {
-		// 	    dashboardService.hideLoading();
-		// 	});
-		// }
-		//
-		// $scope.onFavsCatDrag = function (index) {
-		// 	dashboardService.displayLoading();
-		// 	$scope.favs.splice(index, 1);
-		// 	feedsService.setFavsOrder().then(function (res) {
-		// 	}, function (err) {
-		// 	    console.log(err);
-		// 	    return err;
-		// 	}).finally(function () {
-		// 	    dashboardService.hideLoading();
-		// 	});
-		// }
+		$scope.onFeedsDrag = function (parent, index) {
+			dashboardService.displayLoading();
+			$scope.feeds[parent].feeds.splice(index, 1);
+			feedsService.setInnerFeedsOrder().then(function (res) {
+				angular.forEach($scope.feeds, function (value, key) {
+					if (!value.feeds.length) {
+						feedsService.getAllFeeds();
+					}
+				});
+				return res;
+			}, function (err) {
+			    console.log(err);
+			    return err;
+			}).finally(function () {
+				dashboardService.hideLoading();
+			});
+		}
+
+		$scope.onFeedsCatDrag = function (index) {
+			dashboardService.displayLoading();
+			$scope.feeds.splice(index, 1);
+			feedsService.setFeedsOrder().then(function (res) {
+			    return res;
+			}, function (err) {
+			    console.log(err);
+			    return err;
+			}).finally(function () {
+			    dashboardService.hideLoading();
+			});
+		}
+
+		$scope.onFavsCatDrag = function (index) {
+			dashboardService.displayLoading();
+			$scope.favs.splice(index, 1);
+			feedsService.setFavsOrder().then(function (res) {
+			}, function (err) {
+			    console.log(err);
+			    return err;
+			}).finally(function () {
+			    dashboardService.hideLoading();
+			});
+		}
 
 		$scope.IgnoreDoubleClick = function () {
 			return false;
