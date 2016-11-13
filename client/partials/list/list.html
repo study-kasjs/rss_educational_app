@@ -1,0 +1,75 @@
+<div id="list" class="feeds">
+    <div class="clearfix feed-title-wrap" ng-show="checkIfFirst()">
+        <div class="col-xs-12 list-feed-title first-title">
+            <h3 class="text-center shortened-text" ng-bind="firstListItem.title"></h3>
+        </div>
+    </div>
+    <div class="table-feed" ng-repeat-start="article in articleData.articles | orderBy:getSortParam().type:getSortParam().order | limitTo:articleData.totalDisplayed">
+        <div class="hidden" ng-show="setFirstTitle(articleData.articles[$index], $first)">
+        </div>
+        <div class="fav-indicator" ng-show="checkIfFavourites(article) && !articleData.isFavourites">
+        </div>
+        <div class="col-lg-11 col-xs-10 col-same-height">
+            <div class="list-item" ng-click="readArticle(article)">
+                <p class="shortened-text strong-text" ng-bind="article.title">
+                </p>
+                <p class="shortened-text" ng-bind="article.content">
+                </p>
+            </div>
+        </div>
+        <div class="col-lg-1 col-xs-2 col-same-height">
+            <div class="list-share-wrap center-text">
+                <span class="list-item-btn-top star-icon glyphicon glyphicon-star-empty onhover-orange pointer" ng-click="addFavourite(article)" ng-hide="checkIfFavourites(article) || articleData.isFavourites">
+                </span>
+                <span class="list-item-btn-top glyphicon glyphicon-trash onhover-red pointer" ng-click="removeFavourite(article)" ng-show="articleData.isFavourites"></span>
+                <div class="list-item-btn">
+                    <span class="fa fa-share-alt onhover-green pointer" ng-click="share(article)" uib-popover-template="'partials/modals/sharing.html'" popover-placement="bottom-right">
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div ng-if="toShowTitle(articleData.articles[$index], articleData.articles[$index+1], $index)" ng-repeat-end>
+        <div class="clearfix feed-title-wrap">
+            <div class="col-xs-12 list-feed-title">
+                <h3 class="text-center shortened-text" ng-bind="getTitle(articleData.articles[$index+1], $index)"></h3>
+            </div>
+        </div>
+    </div>
+    <modal show='modalShown'>
+        <h4 class="uppercase" translate>add to favourites</h4>
+        <div class="modal-row">
+            <select id="category"
+                    class="form-control form-input"
+                    ng-model="obj.category"
+                    ng-options="category for category in categories()"
+                    ng-change="checkIfNew()"
+                    uib-tooltip="To enter custom category choose 'custom'"
+                    tooltip-trigger="'focus'"
+                    tooltip-placement="top-left"
+                    translate>
+                <option value="" disabled selected hidden translate>Choose</option>
+            </select>
+        </div>
+        <div class="modal-row">
+            <input id="new-category" class="form-control form-input fading-anim" placeholder="Enter category name" ng-model="newCategory.category" ng-show="addingNewFavCategory" maxlength="25">
+        </div>
+        <div class="modal-row">
+            <div class="center-children">
+                <button type="button" class="app-btn app-btn-blue" aria-label="Justify" ng-click="confirmAddFavourite()" translate>confirm</button>
+            </div>
+        </div>
+        <div class="modal-row" ng-show="error">
+            <div class="alert alert-danger text-center fading-anim" role="alert">
+                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                <span class="sr-only">Error:</span>
+                <span ng-bind="error | translate"></span>
+            </div>
+        </div>
+    </modal>
+</div>
+<div class="load-btn-wrap center-children fading-anim" ng-hide="isAllDisplayed()">
+    <button class="app-btn app-btn-blue" ng-click="loadMore()" translate>
+        Load more
+    </button>
+</div>

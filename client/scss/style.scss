@@ -1,0 +1,172 @@
+$main-border-radius: 2px;
+$blue-btn-color: #42a5f5;
+$blue-btn-active-color: #3949ab;
+$delete-btn-color: #eb4e54;
+$app-transition: all 0.2s ease;
+$main-background-color: #f9f9fb;
+$main-app-offset: 1em;
+$navbar-color: #3949ab;
+$user-dropdown-color: #f0f0f0;
+$navbar-height: 50px;
+
+$navbar-zindex: 9999;
+
+html {
+	font-family: 'Roboto', sans-serif;
+}
+
+body {
+	font-size: 16px;
+	overflow-x: hidden;
+	color: #000;
+	min-width: 240px;
+	background-color: $main-background-color;
+	padding-top: $navbar-height;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-weight: 400;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.card {
+	background-color: #fff;
+	padding: 1em;
+	box-shadow: 1px 2px 5px 1px #888888;
+}
+
+.shortened-text-block {
+	display: inline-block;
+	width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.shortened-text {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.cswidth {
+	width: 40%;
+}
+
+.app-panel {
+	border: none;
+	border-radius: $main-border-radius;
+	transition: $app-transition;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+
+	&:visited {
+	}
+
+	&:hover {
+		border: none;
+		transition: $app-transition;
+		box-shadow: 0 4px 15px 0 rgba(57, 73, 171, 1);
+	}
+
+	&:active {
+		border: none;
+		outline: none;
+	}
+}
+
+.my-hidden {
+	display: none;
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 0.2s ease;
+}
+
+.center-text {
+	text-align: center;
+}
+
+* {
+	outline: none;
+}
+
+.center-children {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.alert{
+	margin-bottom: 0px;
+	margin-top: $main-app-offset;
+}
+
+.capitalize {
+	text-transform: capitalize;
+}
+
+.loading-icon{
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 99000;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+.pointer{
+	cursor:pointer; 
+}
+
+.no-pointer-events{
+	pointer-events: none;
+}
+
+.center-absolute{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.selected {
+	background-color: #cecece;
+}
+
+.offset-top    {margin-top:    1em;}
+.offset-right  {margin-right:  1em;}
+.offset-bottom {margin-bottom: 1em;}
+.offset-left   {margin-left:   1em;}
+
+.offset-half-top    {margin-top:    0.5em;}
+.offset-half-right  {margin-right:  0.5em;}
+.offset-half-bottom {margin-bottom: 0.5em;}
+.offset-half-left   {margin-left:   0.5em;}
+
+.not-important{
+	color: #888;
+}
+
+@import "navbar";
+@import "addFeed";
+@import "feedList";
+@import "sidebar";
+@import "home";
+@import "auth";
+@import "profileSettings";
+@import "buttons";
+@import "modals/toaster";
+@import "modals/modal";
+@import "animations";
+@import "forgot";
+@import "article.scss";
+@import "advicedFeeds.scss";
+@import "MediaQueries";

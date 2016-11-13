@@ -1,0 +1,158 @@
+<div id="profile">
+	<div class="mobile-half-padding col-xs-12 col-sm-10 col-sm-offset-1 col-lg-6 col-lg-offset-3">
+		<div class="cstmform-border-profile-header profile-header card">
+			<div class="col-xs-12 col-md-5 center-children">
+			</div>
+			<div class="col-xs-12 col-md-5">
+				<div class="profile-name text-center-mobile">
+					<h4 ng-show="currentUser().displayName"><span ng-bind="currentUser().displayName"></h4>
+				</div>
+				<div class="profile-date text-center-mobile">
+					<h5 ng-show="currentUser().date_of_signup"><span translate>Joined:</span><span ng-bind="currentUser().date_of_signup | date : 'mediumDate'"></h5>
+				</div>
+				<div class="profile-email text-center-mobile">
+					<h5><span class="info" ng-bind="currentUser().email"></h5>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="mobile-half-padding col-xs-12 col-sm-10 col-sm-offset-1 col-lg-6 col-lg-offset-3">
+		<div class="cstmform-border-profile card">
+			<form name="upload_form">
+				<div class="form-group">
+					<div class="row">
+						<div class="col-xs-12 col-md-5 center-children">
+							<img ng-hide="!currentUser().avatar" ng-src="{{currentUser().avatar}}" class="img-circle profile-img-square img-responsive" name="image" alt="User Image">
+							<img ng-show="!currentUser().avatar" class="img-circle profile-img-square img-responsive" alt='user picture' ng-src='{{currentUser().picture}}' src="/assets/images/profile.png">
+						</div>
+						<div class="col-xs-12 col-md-7 clearfix">
+							<div class="center-children-mobile">
+								<button class="app-btn app-btn-blue pull-right upload-btn upload-btn-offset" ngf-select="upload($file, $invalidFiles)" ngf-pattern="'image/*'" accept="image/*" ngf-max-size="1MB">
+									<span class="fa fa-upload profile-btn-icon"></span><span translate> Upload Avatar</span>
+								</button>
+							</div>
+						</div>
+						<div class="col-xs-12">
+							<div ng-show="f.name" class="file-name text-center">
+								<span ng-bind="'File name: ' + f.name"></span>
+							</div>
+							<div class="alert alert-danger text-center fading-anim" role="alert" ng-show="errFile">
+								<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+								<span class="sr-only">Error:</span>
+								<span ng-bind="errFile.$error"></span>
+								<span ng-bind="errFile.$errorParam"></span>
+							</div>
+							<span class="error-msg" ng-show="upload_form.file.$error.maxSize">
+								File too large
+								{{file.size / 1000000|number:1}}MB: max 1M
+							</span>
+						</div>
+					</div>
+				</div>
+			</form>
+			<hr>
+			<!-- <div class="row">
+				<div class="col-xs-12 center-children-mobile">
+					<button class="app-btn app-btn-blue pull-right upload-btn" ng-click="changeTheme()"><span class="fa fa-paint-brush profile-btn-icon"></span><span class="test-lang" translate >change theme</span></button>
+				</div>
+			</div> -->
+			<!-- <hr> -->
+			<div class="row">
+				<div class="col-xs-12 center-children-mobile">
+					<button class="app-btn app-btn-blue pull-right upload-btn" ng-click="showChangepwd = !showChangepwd"><span class="fa fa-unlock-alt profile-btn-icon"></span><span translate>change password</span></button>
+				</div>
+			</div>
+			<form name="changePassForm" id="change-pass-form" class="fading-anim" ng-submit="changePass(changePassForm)" ng-validate="changePassValidation" ng-show="showChangepwd">
+				<div class="form-group change-pass">
+					<div class="row">
+						<label class="col-sm-5 capitalize" for="currentPassword"><span translate>current password:</span></label>
+						<div class="col-sm-7">
+							<input name="currentPassword" id="currentPassword" class="form-control" type="password" ng-model="newUserData.currentPass">
+						</div>
+					</div>
+				</div>
+				<div class="form-group change-pass">
+					<div class="row">
+						<label class="col-sm-5 capitalize" for="newPassword"><span translate>new password:</span></label>
+						<div class="col-sm-7">
+							<input name="newPassword" id="newPassword" class="form-control" type="password" ng-model="newUserData.password" ng-required>
+							<ul id="strength" check-strength="newUserData.password" myuser="newUserData"></ul>
+						</div>
+					</div>
+				</div>
+				<div class="form-group change-pass">
+					<div class="row">
+						<label class="col-sm-5 capitalize" for="repeatNewPassword"><span translate>confirm password:</span></label>
+						<div class="col-sm-7">
+							<input name="repeatNewPassword" id="repeatNewPassword" class="form-control" type="password" ng-model="newUserData.newPassRepeat" ng-required pw-check="newPassword">
+							<span class="msg-error" ng-show="changePassForm.repeatNewPassword.$error.pwmatch">
+								Passwords does't match
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="center-children">
+					<button type="submit" class="app-btn app-btn-blue margin-right"><span translate>save</span></button>
+					<button type="reset" ng-click="resetPass()" class="app-btn app-btn-blue margin-left"><span translate>reset</span></button>
+				</div>
+				<div class="alert alert-danger text-center animate-error" role="alert" ng-show="err">
+					<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+					<span class="sr-only">Error:</span>
+					<span ng-bind="err.message | translate "></span>
+				</div>
+			</form>
+			<hr>
+			<div class="row">
+				<div class="col-xs-12 text-center ng-cloak">
+					<button class="app-btn app-btn-red soc-btn" ng-if="currentUser().facebook" ng-click="unlink('facebook')">
+						Facebook <span class="fa fa-link btn-social-icon"></span>
+					</button>
+					<button class="app-btn app-btn-blue soc-btn" ng-if="!currentUser().facebook" ng-click="link('facebook')">
+						Facebook <span class="fa fa-unlink btn-social-icon"></span>
+					</button>
+					<button class="app-btn app-btn-red soc-btn" ng-if="currentUser().google" ng-click="unlink('google')">
+						Google <span class="fa fa-link btn-social-icon"></span>
+					</button>
+					<button class="app-btn app-btn-blue soc-btn" ng-if="!currentUser().google" ng-click="link('google')">
+						Google <span class="fa fa-unlink btn-social-icon"></span>
+					</button>
+					<button class="app-btn app-btn-red soc-btn" ng-if="currentUser().twitter" ng-click="unlink('twitter')">
+						Twitter <span class="fa fa-link btn-social-icon"></span>
+					</button>
+					<button class="app-btn app-btn-blue soc-btn" ng-if="!currentUser().twitter" ng-click="link('twitter')">
+						Twitter <span class="fa fa-unlink btn-social-icon"></span>
+					</button>
+					<button class="app-btn app-btn-red soc-btn" ng-if="currentUser().linkedin" ng-click="unlink('linkedin')">
+						Linkedin <span class="fa fa-link btn-social-icon"></span>
+					</button>
+					<button class="app-btn app-btn-blue soc-btn" ng-if="!currentUser().linkedin" ng-click="link('linkedin')">
+						Linkedin <span class="fa fa-unlink btn-social-icon"></span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<modal id="profile-modal" show='modalShown' class="carousel">
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+		<div translate class="text-center clickme center-absolute">Click to apply</div>
+		<ol class="carousel-indicators">
+			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#myCarousel" data-slide-to="1"></li>
+			<li data-target="#myCarousel" data-slide-to="2"></li>
+		</ol>
+		<div class="carousel-inner" role="listbox">
+			<div class="item" ng-class="$first? 'active':''" ng-repeat="layout in layouts">
+				<img class="change-theme-img" src="{{layout.src}}" alt="{{layout.name}}" ng-click="updateTheme(layout)">
+			</div>
+		</div>
+		<a class="left carousel-control" data-target="#myCarousel" role="button" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+			<span class="sr-only">Previous</span>
+		</a>
+		<a class="right carousel-control" data-target="#myCarousel" role="button" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+		</a>
+	</div>
+</modal>

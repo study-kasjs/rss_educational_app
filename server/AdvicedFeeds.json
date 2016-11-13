@@ -1,0 +1,190 @@
+﻿{
+  "feedsDictionary": [
+    {
+      "category": "IT",
+      "feeds": [
+        {
+          "title": "TechCrunch",
+          "description": "TechCrunch is a group-edited blog that profiles the companies, products and events defining and transforming the new web.",
+          "link": "https://techcrunch.com",
+          "rsslink": "http://feeds.feedburner.com/TechCrunch/",
+          "format": "RSS"
+        },
+        {
+          "title": "The Verge - All Posts",
+          "description": "",
+          "link": "http://www.theverge.com/",
+          "rsslink": "http://www.theverge.com/rss/frontpage",
+          "format": "ATOM"
+        },
+        {
+          "title": "Engadget RSS Feed",
+          "description": "Engadget is a web magazine with obsessive daily coverage of everything new in gadgets and consumer electronics",
+          "link": "https://www.engadget.com/rss.xml",
+          "rsslink": "https://www.engadget.com/rss.xml",
+          "format": "RSS"
+        },
+        {
+          "title": "CNET News",
+          "description": "CNET news editors and reporters provide top technology news, with investigative reporting and in-depth coverage of tech issues and events.",
+          "link": "http://www.cnet.com/#ftag=CAD590a51e",
+          "rsslink": "http://www.cnet.com/rss/news/",
+          "format": "RSS"
+        },
+        {
+          "title": "Интересные / Публикации / Хабралента",
+          "description": "Интересные публикации из Хабраленты",
+          "link": "https://habrahabr.ru/feed/posts/",
+          "rsslink": "https://habrahabr.ru/rss/feed/posts/6266e7ec4301addaf92d10eb212b4546/",
+          "format": "RSS"
+        },
+        {
+          "title": "vc.ru",
+          "description": "",
+          "link": "https://vc.ru/",
+          "rsslink": "https://vc.ru/feed",
+          "format": "RSS"
+        },
+        {
+          "title": "Phone Arena - Latest News",
+          "description": "PhoneArena.com - Cell Phone Reviews, News, Specs and Info.",
+          "link": "http://www.phonearena.com/news",
+          "rsslink": "http://feeds2.feedburner.com/phonearena/ySoL",
+          "format": "RSS"
+        },
+        {
+          "title": "Android Authority",
+          "description": "Android News, Reviews, How To",
+          "link": "http://www.androidauthority.com",
+          "rsslink": "http://feed.androidauthority.com/",
+          "format": "RSS"
+        }
+      ]
+    },
+    {
+      "category": "News",
+      "feeds": [
+        {
+          "title": "CNN.com - RSS Channel - Intl Homepage - News",
+          "description": "CNN.com delivers up-to-the-minute news and information on the latest top stories, weather, entertainment, politics and more.",
+          "link": "http://www.cnn.com/intl_index.html",
+          "rsslink": "http://rss.cnn.com/rss/edition.rss",
+          "format": "RSS"
+        },
+        {
+          "title": "Reuters: World News",
+          "description": "Reuters.com is your source for breaking news, business, financial and investing news, including personal finance and stocks. Reuters is the leading global provider of news, financial information and technology solutions to the world's media, financial institutions, businesses and individuals.",
+          "link": "http://www.reuters.com",
+          "rsslink": "http://feeds.reuters.com/Reuters/worldNews",
+          "format": "RSS"
+        },
+        {
+          "title": "Новости Украины 24 часа в сутки : ЛІГАБізнесІнформ",
+          "description": "Ежедневные новости Украины: Оперативно, Достоверно, 24 часа в сутки. Последние новости, фотографии с места событий. Горячие новости: политика, экономика и финансы, общество, мир, культура, спорт и новости Киева.",
+          "link": "http://www.liga.net",
+          "rsslink": "http://news.liga.net/all/rss.xml",
+          "format": "RSS"
+        },
+        {
+          "title": "Інформаційне Агентство УНІАН",
+          "description": "Iнформацiйне агентство УНIАН :: Новини, Полiтика, Бiзнес, Фотосервiс, Регiони",
+          "link": "http://www.unian.ua/",
+          "rsslink": "http://rss.unian.net/site/news_ukr.rss",
+          "format": "RSS"
+        },
+        {
+          "title": "ABC News: Top Stories",
+          "description": "",
+          "link": "http://abcnews.go.com/",
+          "rsslink": "http://feeds.abcnews.com/abcnews/topstories",
+          "format": "RSS"
+        },
+        {
+          "title": "BBC News - Home",
+          "description": "BBC News - Home",
+          "link": "http://www.bbc.co.uk/news/",
+          "rsslink": "http://feeds.bbci.co.uk/news/rss.xml",
+          "format": "RSS"
+        },
+        {
+          "title": "FOX News",
+          "description": "FOXNews.com - Breaking news and video. Latest Current News: U.S., World, Entertainment, Health, Business, Technology, Politics, Sports.",
+          "link": "http://www.foxnews.com/",
+          "rsslink": "http://feeds.foxnews.com/foxnews/most-popular",
+          "format": "RSS"
+        }
+      ]
+    },
+    {
+      "category": "Sport",
+      "feeds": [
+        {
+          "title": "www.espn.com - TOP",
+          "description": "Latest TOP news from www.espn.com",
+          "link": "http://www.espn.com",
+          "rsslink": "http://www.espn.com/espn/rss/news",
+          "format": "RSS"
+        },
+        {
+          "title": "BBC Sport - Sport",
+          "description": "BBC Sport - Sport",
+          "link": "http://www.bbc.co.uk/sport/0/",
+          "rsslink": "http://feeds.bbci.co.uk/sport/rss.xml?edition=uk",
+          "format": "RSS"
+        }
+      ]
+    },
+    {
+      "category": "Gaming",
+      "feeds": [
+        {
+          "title": "IGN All",
+          "description": "The latest IGN news, reviews and videos about video games, movies, TV, tech and comics",
+          "link": "http://www.ign.com/articles",
+          "rsslink": "http://feeds.ign.com/ign/all",
+          "format": "RSS"
+        },
+        {
+          "title": "Eurogamer.net",
+          "description": "Eurogamer is the largest independent gaming website in Europe, providing news, reviews, previews, and more.",
+          "link": "http://www.eurogamer.net/",
+          "rsslink": "http://www.eurogamer.net/?format=rss",
+          "format": "RSS"
+        },
+        {
+          "title": "GameSpot News",
+          "description": "The latest News from GameSpot",
+          "link": "http://www.gamespot.com/feeds/news/",
+          "rsslink": "http://www.gamespot.com/feeds/news/",
+          "format": "RSS"
+        },
+        {
+          "title": "destructoid",
+          "description": "",
+          "link": "https://www.destructoid.com/?mode=atom",
+          "rsslink": "http://feeds.feedburner.com/Destructoid",
+          "format": "ATOM"
+        }
+      ]
+    },
+    {
+      "category": "Food",
+      "feeds": [
+        {
+          "title": "David Lebovitz",
+          "description": "",
+          "link": "http://www.davidlebovitz.com/",
+          "rsslink": "http://feeds.feedburner.com/davidlebovitz/blog/",
+          "format": "ATOM"
+        },
+        {
+          "title": "Serious Eats",
+          "description": "",
+          "link": "http://www.seriouseats.com/",
+          "rsslink": "http://feeds.feedburner.com/seriouseatsfeaturesvideos",
+          "format": "ATOM"
+        }
+      ]
+    }
+  ]
+}

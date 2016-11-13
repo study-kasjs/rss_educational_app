@@ -1,0 +1,91 @@
+.main-navbar .navbar {
+	background: #2c3e50;
+}
+
+.navbar-nav > .user-menu > .dropdown-toggle {
+	background: #2c3e50;
+}
+
+	.navbar-nav > .user-menu > .dropdown-toggle:active {
+		background: #2c3e50;
+	}
+
+	.navbar-nav > .user-menu > .dropdown-toggle:hover {
+		background: #2c3e50;
+	}
+
+	.navbar-nav > .user-menu > .dropdown-toggle > span:hover {
+		color: #ffffff;
+	}
+
+.app-btn-blue {
+	color: white;
+	background-color: #2c3e50;
+	outline: none;
+}
+
+.app-btn-blue:visited {
+	color: white;
+	background-color: #2c3e50;
+}
+
+.app-btn-blue:hover {
+	color: black;
+	background-color: white;
+	-webkit-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+}
+
+	.app-btn-blue:hover a {
+		color: black;
+	}
+
+.app-btn-blue:active {
+	outline: none;
+	color: white;
+	background-color: #2c3e50;
+}
+
+.subscribe-btn {
+	border-color: #2c3e50;
+}
+
+.sidebar-item:hover {
+	-webkit-transition: background 0.2s ease;
+	transition: background 0.2s ease;
+	border-right: 0.7em solid #2c3e50;
+	background-color: #c1c1c1;
+}
+
+#sidebar .selected {
+	border-right: 0.7em solid #2c3e50;
+	background-color: #c1c1c1;
+}
+
+.app-panel:hover {
+	border: none;
+	-webkit-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+	box-shadow: 0 4px 15px 0 #2c3e50;
+}
+
+.spinner > div {
+	background-color: #2c3e50;
+	height: 100%;
+	width: 6px;
+	display: inline-block;
+	-webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+	animation: sk-stretchdelay 1.2s infinite ease-in-out;
+}
+
+.profile-header {
+	background-color: #1d2129;
+}
+
+.list-feed-title{
+	background-color: #2c3e50;
+}
+
+.sidebar-sub-item:hover {
+	border-right: 0.7em solid rgba(44, 62, 80, 0.6);
+}

@@ -1,0 +1,179 @@
+﻿#adviced-wrapper {
+    margin-bottom: 2em;
+}
+
+.adviced-card-container{
+    overflow: hidden;
+    position: relative;
+}
+
+.adviced-card {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    box-sizing: border-box;
+    height: 10em;
+    border-radius: $main-border-radius;
+}
+
+.add-adviced-card {
+    border: 5px solid $blue-btn-active-color;
+}
+
+.adviced-card::after {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.78));
+    transition: opacity 0.2s ease;
+}
+
+.advice-cover-image {
+    z-index: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+#adviced-cards-wrapper {
+    padding: $main-app-offset/2;
+
+    [class*=' col-'] {
+        padding: $main-app-offset/2;
+    }
+}
+
+.adviced-bottom-offset {
+    margin-bottom: 5em;
+}
+
+.adviced-img {
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 175px;
+    border-radius: $main-border-radius 0 0 $main-border-radius;
+}
+
+.adviced-no-img {
+    background-image: url(/assets/images/noimage.png);
+}
+
+.advice-content {
+    display: block;
+    cursor: pointer;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.78));
+    transition: all 0.5s ease;
+}
+
+.gradient {
+   position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(rgba(0,0,0,.5),rgba(0,0,0,.78));
+}
+
+.gradient:hover {
+    opacity: 0.2;
+}
+
+.advice-content:hover {
+    transition: all 0.2s ease;
+    background: radial-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.3));
+}
+
+.advice-header {
+    pointer-events: none;
+    z-index: 3;
+    color: white;
+    margin: 0;
+}
+
+.add-advice-header {
+    color: $blue-btn-active-color;
+}
+
+.explore-header {
+    padding-left: 0.3em;
+}
+
+#feeds-title {
+    padding-left: 7px;
+}
+
+#adviced-feeds-wrapper {
+    padding: $main-app-offset/2;
+    margin-top: $main-app-offset;
+    margin-bottom: $main-app-offset;
+
+    [class*=' col-'] {
+        padding: $main-app-offset/2;
+    }
+}
+
+.adviced-feed {
+    padding: $main-app-offset;
+    border-radius: $main-border-radius;
+    height: 29em;
+}
+
+.adviced-feed-title {
+    & > a {
+        font-weight: 500;
+        color: black;
+        text-decoration: none;
+    }
+
+    height: 3em;
+    cursor: pointer;
+    margin-bottom: $main-app-offset;
+}
+
+.stats-block {
+    padding: 0;
+    height: 50px;
+}
+
+.adviced-feed-content {
+    height: 3em;
+    overflow: hidden;
+}
+
+.readers-num {
+    font-weight: 600;
+    margin: 0;
+}
+
+.adviced-card-wrap:hover {
+    overflow: hidden;
+    .my-hidden {
+        animation: simpleSlide 0.4s ease;
+        display: block;
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.upload-indicator {
+    cursor: pointer;
+    position: absolute;
+    z-index: 1000;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 4em 4em 0;
+    border-color: transparent #22f772 transparent transparent;
+    transition: all 1s ease;
+}
+
+.cover-icon{
+    position: relative;
+    left: 2em;
+    top: 0.5em;
+}

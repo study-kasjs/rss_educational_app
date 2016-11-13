@@ -1,0 +1,27 @@
+/*----------------Navbar--------------*/
+
+.main-navbar .navbar {
+	background: #3949ab;
+}
+
+.navbar-nav > .user-menu > .dropdown-toggle {
+	background: #3949ab;
+}
+
+	.navbar-nav > .user-menu > .dropdown-toggle:active {
+		background: #3949ab;
+	}
+
+	.navbar-nav > .user-menu > .dropdown-toggle:hover {
+		background: #3949ab;
+	}
+
+	.navbar-nav > .user-menu > .dropdown-toggle > span:hover {
+		color: #ffffff;
+	}
+
+
+.profile-header {
+	background-color: #18246e;
+}
+
