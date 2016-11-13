@@ -1,16 +1,12 @@
 {
   "name": "rss_reader",
-  "description": "Rss reader aplication.",
+  "description": "rss_educational_app",
   "main": "app.js",
-  "authors": [
-    "Ch-041"
-  ],
   "license": "ISC",
   "keywords": [
     "rss",
     "reader"
   ],
-  "homepage": "https://github.com/nromanen/Ch-041",
   "ignore": [
     "**/.*",
     "node_modules",

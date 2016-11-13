@@ -11,14 +11,7 @@
 			dashboardService.toReload = false;
 			$state.reload();
 		}
-		// $scope.getTheme = function () {
-		// 	if (authService.isLoggedIn()) {
-		// 		return profileService.refreshProfileData().colorTheme;
-		// 	} else {
-		// 		return "theme1";
-		// 	}
-		// }
-
+		
 		$scope.fadeIn = function ($el) {
 			$el.removeClass('not-visible');
 			$el.addClass('fade-in-1s');
