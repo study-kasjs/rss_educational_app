@@ -2,14 +2,13 @@ var gulp = require('gulp'),
 	sourcemaps = require('gulp-sourcemaps'),
 	sass = require('gulp-sass'),
 	autoprefixer = require('gulp-autoprefixer'),
-	uglify = require('gulp-uglify'),
 	watch = require('gulp-watch'),
 	cssmin = require("gulp-cssmin"),
 	rename = require("gulp-rename"),
 	sourcemaps = require('gulp-sourcemaps');
 
 	gulp.task('sass', function () {
-		return gulp.src('./client/scss/**/*.scss')
+		return gulp.src('./scss/**/*.scss')
 			.pipe(sass())
 			.pipe(autoprefixer({
 				cascade: true
@@ -21,10 +20,10 @@ var gulp = require('gulp'),
 				suffix: '.min'
 			}))
 			.pipe(sourcemaps.write())
-			.pipe(gulp.dest('./client/css'));
+			.pipe(gulp.dest('./css'));
 	});
 
 	gulp.task('watch', function() {
-    gulp.watch('./client/scss/**/*.scss', ['sass']);
+    gulp.watch('./scss/**/*.scss', ['sass']);
 });
 	gulp.task('default', ['sass','watch']);

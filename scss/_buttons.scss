@@ -22,7 +22,7 @@
 
 	&:active {
 		transition: $app-transition;
-		border: none;
+		border: 1px solid black ;
 		outline: none;
 	}
 }
@@ -116,7 +116,7 @@ button[disabled] {
 	border-radius: $main-border-radius;
 	transition: $app-transition;
 	cursor: pointer;
-	
+
 	&:visited {
 		border: none;
 	}
@@ -276,14 +276,14 @@ a.sharing-btn {
 }
 .soc-btn {
 	width: 145px;
-	margin: 5px 5px 5px 0px;	
+	margin: 5px 5px 5px 0px;
 }
 
 .terms-btn {
 	font-weight: 600;
 	font-size: 16px;
 	margin-right: 0;
-	border: 1px solid #cccccc; 
+	border: 1px solid #cccccc;
 }
 
 .close:hover {

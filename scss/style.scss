@@ -123,7 +123,7 @@ p {
 }
 
 .pointer{
-	cursor:pointer; 
+	cursor:pointer;
 }
 
 .no-pointer-events{
@@ -160,13 +160,8 @@ p {
 @import "feedList";
 @import "sidebar";
 @import "home";
-@import "auth";
 @import "profileSettings";
 @import "buttons";
-@import "modals/toaster";
-@import "modals/modal";
-@import "animations";
 @import "forgot";
 @import "article.scss";
 @import "advicedFeeds.scss";
-@import "MediaQueries";
