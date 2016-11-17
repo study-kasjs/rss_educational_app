@@ -1,6 +1,0 @@
-https://www.overclockers.ru/rss/all.rss
-http://www.pravda.com.ua/rss/
-http://www.3dnews.ru/news/rss/
-http://www.theverge.com/rss/frontpage
-http://itc.ua/feed
-http://news.liga.net/all/rss.xml
