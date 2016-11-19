@@ -2,21 +2,11 @@
   "name": "rss_reader",
   "version": "1.0.0",
   "description": "rss_educational_app",
-  "main": "index.js",
-  "engines": {
-    "node": "4.4.7"
-  },
   "scripts": {
     "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
-  "repository": {
-    "type": "git"
-  },
-  "keywords": [
-    "rss_educational_app"
-  ],
   "devDependencies": {
     "bower": "^1.7.9",
     "gulp": "^3.9.0",
