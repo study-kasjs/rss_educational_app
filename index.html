@@ -1,0 +1,21 @@
+<html ng-app="rssreader">
+<head>
+	<title>Rss Reader</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel='stysheet'/>
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel='stysheet'/>
+</head>
+	<body ng-controller='feedCtrl'>
+        <div class="row">
+            <div class="col-sm-12">
+                <input type="text" ng-model='feedLink' placeholder="Enter feed">
+                <button ng-click='getFeedArticle()'>Add Fedd</button>
+            </div>
+        </div>
+        <script src='./node_modules/angular/angular.min.js'></script>
+        <script src='./node_modules/jquery/dist/jquery.min.js'></script>
+        <script src='./node_modules/bootstrap/dist/js/bootstrap.min.js'></script>
+        <script src='app.js' ></script>
+    </body>
+</html>
